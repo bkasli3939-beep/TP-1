@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX07</title>
+</head>
+<body>
+    <h1>Crée un compte</h1>
+    <form >
+        <fieldset>
+             <legend>identité : </legend>
+        <label for="nom">nom</label>
+        <input type="text" id="nom " placeholder="écrire votre nom" required><br><br>
+        <label for="prénom">prénom</label><br>
+        <input type="text" id="nom " placeholder="écrire votre prénom" required><br><br>
+        <label for="date de naissance">date de naissance</label><br>
+        <input type="date" id="naissance " min="1900-01-01" max="date('y-m-d')" required><br><br>
+        </fieldset>
+       
+        <fieldset>
+            <legend> contact</legend>
+            <label for=" tel">téléphone (maroc)* </label>
+              <input type="tel" id="tel" name="tel" pattern="^0[5-7]\d{8}$" required placeholder=" saisir le némuro du tel"><br><br>
+              <label for="site">Site personnel :</label><br>
+            <input type="url" id="site" name="site" placeholder="https://monsite.com"><br><br>
+
+        </fieldset>
+        <fieldset>
+            <legend>sécurité</legend>
+            <label for="mot de passe"> mot de passe </label>
+            <input type="password" id="password" placeholder="entrer votre mot de passe"  required minlength="8"><br><br>
+            <label for="confirm">Confirmation du mot de passe* :</label><br>
+            <input type="password" id="confirm" name="confirm" required><br><br>
+
+        </fieldset>
+        <fieldset>
+            <legend>Préférences</legend>
+
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Recevoir la newsletter</label><br><br>
+
+            <label>Rôle :</label><br>
+            <input type="radio" id="etudiant" name="role" value="etudiant" required>
+            <label for="etudiant">Étudiant</label><br>
+
+            <input type="radio" id="pro" name="role" value="pro">
+            <label for="pro">Pro</label><br><br>
+        </fieldset>
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>
